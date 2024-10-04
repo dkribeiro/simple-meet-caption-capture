@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Simple Google Meet Captions Saver",
+  "version": "1.0",
+  "description": "Saves Google Meet captions to a text file.",
+  "permissions": ["activeTab", "scripting", "downloads"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
